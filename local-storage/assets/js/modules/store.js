@@ -17,6 +17,9 @@ const store = {
         console.log(`📦 Removing ${key} from localStorage`)
         localStorage.removeItem(key)
     },
+    clear(){
+        localStorage.clear()
+    },
     modify(key,objKey,value) {
         let data = this.get(key)
         if(data && typeof data === 'object'){
