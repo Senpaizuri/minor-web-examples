@@ -13,6 +13,10 @@ const store = {
             return false
         }
     },
+    remove(key){
+        console.log(`📦 Removing ${key} from localStorage`)
+        localStorage.removeItem(key)
+    },
     modify(key,objKey,value) {
         let data = this.get(key)
         if(data && typeof data === 'object'){
