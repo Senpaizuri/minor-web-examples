@@ -18,6 +18,7 @@ const store = {
         localStorage.removeItem(key)
     },
     clear(){
+        console.log(`📦 Clearing localStorage`)
         localStorage.clear()
     },
     modify(key,objKey,value) {
