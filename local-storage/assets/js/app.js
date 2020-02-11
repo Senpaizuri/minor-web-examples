@@ -13,7 +13,7 @@ const app = {
             store.set('weather-coords',coords)
             store.set('weather-data',await api.get(config.cors + config.base + config.key + `/${coords.lat},${coords.long}`))
             store.modify('weather-coords','time',new Date)
-        }else if(time.expired(store.get('weather-coords')['time'],{min:1})){
+        }else if(time.expired(store.get('weather-coords')['time'],{minutes:1})){
             store.set('weather-data',await api.get(config.cors + config.base + config.key + `/${coords.lat},${coords.long}`))
             store.modify('weather-coords','time',new Date)
         }

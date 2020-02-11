@@ -13,11 +13,11 @@ const store = {
             return false
         }
     },
-    remove(key){
+    remove(key) {
         console.log(`📦 Removing ${key} from localStorage`)
         localStorage.removeItem(key)
     },
-    clear(){
+    clear() {
         console.log(`📦 Clearing localStorage`)
         localStorage.clear()
     },
